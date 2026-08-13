@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="JomBajet.Views.MenuListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JomBajet.Views">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="5">
+            <TextBlock Text="MENU LIST" FontSize="32" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center"/>
+            <Button Content="MONTHLY BAJET" FontSize="16" FontWeight="DemiBold" Command="{Binding BajetCommand}" Margin="5" Style="{StaticResource RoundedButton}"  HorizontalAlignment="Left"/>
+            <Button Content="BAJET TRACKER" FontSize="16" FontWeight="DemiBold" Command="{Binding TrackerCommand}" Margin="5" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left"/>
+            <Button Content="BAJET PLANNER" FontSize="16" FontWeight="DemiBold" Command="{Binding PlannerCommand}" Margin="5" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left"/>
+            <Button Content="SETTINGS" FontSize="16" FontWeight="DemiBold" Command="{Binding SettingsCommand}" Margin="5" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
