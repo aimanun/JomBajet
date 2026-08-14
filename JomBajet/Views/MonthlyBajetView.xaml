@@ -4,9 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:viewmodels="clr-namespace:JomBajet.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MonthlyBajetViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -39,7 +41,12 @@
             <Button Content="Confirm" Command="{Binding ConfirmCommand}" IsEnabled="{Binding EnableCustomise}" FontSize="16" Style="{StaticResource WindowsButton}"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" Background="SandyBrown">
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Button Content="ADD" Command="{Binding AddCommand}" FontSize="16" FontWeight="DemiBold" Style="{StaticResource RoundedButton}"/>
+            <Button Content="REMOVE ALL" Command="{Binding RemoveAllCommand}" FontSize="16" FontWeight="DemiBold" Style="{StaticResource RoundedButton}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Vertical" Background="SandyBrown">
             <TextBlock Text="Commitment" FontWeight="DemiBold" FontSize="24" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Bajet Amount: RM" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="5 5 0 5"/>
@@ -47,7 +54,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" Background="AliceBlue">
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Background="AliceBlue">
             <TextBlock Text="Spending" FontWeight="DemiBold" FontSize="24" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Bajet Amount: RM" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="5 5 0 5"/>
@@ -55,7 +62,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" Background="YellowGreen">
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical" Background="YellowGreen">
             <TextBlock Text="Saving" FontWeight="DemiBold" FontSize="24" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Bajet Amount: RM" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="5 5 0 5"/>

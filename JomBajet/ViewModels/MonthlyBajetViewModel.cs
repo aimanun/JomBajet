@@ -64,19 +64,32 @@ namespace JomBajet.ViewModels
                 SetProperty(ref enableCustomise, value);
                 FiftyCommand.RaiseCanExecuteChanged();
                 SeventyCommand.RaiseCanExecuteChanged();
-
             }
         }
 
         public DelegateCommand FiftyCommand { get; }
         public DelegateCommand SeventyCommand { get; }
         public DelegateCommand ConfirmCommand { get; }
+        public DelegateCommand AddCommand { get; }
+        public DelegateCommand RemoveAllCommand { get; }
 
         public MonthlyBajetViewModel()
         {
             FiftyCommand = new DelegateCommand(Fifty, DisableDefaultSplit);
             SeventyCommand = new DelegateCommand(Seventy, DisableDefaultSplit);
             ConfirmCommand = new DelegateCommand(Confirm);
+            AddCommand = new DelegateCommand(Add);
+            RemoveAllCommand = new DelegateCommand(RemoveAll);
+        }
+
+        private void RemoveAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Add()
+        {
+            throw new NotImplementedException();
         }
 
         private bool DisableDefaultSplit() => EnableCustomise is false;

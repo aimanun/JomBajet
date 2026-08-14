@@ -10,6 +10,7 @@ namespace JomBajet.Models
             get { return id; }
             set { SetProperty(ref id, value); }
         }
+
         private string name;
         public string Name
         {
